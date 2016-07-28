@@ -17,7 +17,7 @@
   $ lxc-checkconfig
 ```
 
-![lxc-checkconfig](url)
+![ lxc-checkconfig ](images/1.jpg)
 
 > 3. Creamos un contenedor con el comando lxc-create -n nombreDelContenedo -t template
 
@@ -25,19 +25,21 @@
   $ sudo lxc-create -n contenedor -t download
 ```
 
-![lxc-checkconfig](url)
+![ lxc-create ](images/2.jpg)
 
 > 4. Iniciamos el contenedor con lxc-start -n nombreDelContenedor, al agregarle la opción *-d* le indicamos que inicie como demonio
 
 ```bash
   $ sudo lxc-start -n contenedor -d
 ```
+![ lxc-create ](images/3.jpg)
 
 > 5. Nos conectamos al contenedor iniciada lxc-attach -n nombreDelContenedor
 
 ```bash
   $ sudo lxc-attach -n contenedor
 ```
+![ lxc-attach ](images/4.jpg)
 
 > 6. Para poder apagar el contenedor usamos el comando *poweroff*
 
@@ -62,10 +64,14 @@
 
 > Los procesos init de los contenedores se ven como procesos de */sbin/init*
 
+![ ps ](images/5.jpg)
+
 * ¿Pueden detectar cuantos y cuales procesos se ven desde el invitado?
 
 > Desde la máquina host solo se pueden ver los procesos que se estan ejecutando pero no se puede ver que contenedor lo ejecuta.
 > De lado del contenedor solo se ven los procesos que él mismo está ejecutando
+
+![ ps ](images/6.jpg)
 
 * ¿Qué otras llamadas al sistema importantes creen que pasan para inicializar el contenedor?
 
